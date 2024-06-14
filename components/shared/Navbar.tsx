@@ -24,22 +24,22 @@ const Navbar = () => {
   const [loading, setLoading] = useState(false);
 
 
-  useEffect(() => {
-    // Fetch user details from the server
-    const fetchUser = async () => {
+//   useEffect(() => {
+//     // Fetch user details from the server
+//     const fetchUser = async () => {
 
-      try {
-        const res = await fetch("/api/auth/user");
-        const data = await res.json();
-        setUserData(data.data);
-        console.log("User data:", data);
+//       try {
+//         const res = await fetch("/api/auth/user");
+//         const data = await res.json();
+//         setUserData(data.data);
+//         console.log("User data:", data);
 
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
-    fetchUser();
-  }, []);
+//       } catch (error) {
+//         console.error("Error fetching user data:", error);
+//       }
+//     };
+//     fetchUser();
+//   }, []);
 
   return (
     <section className="fixed w-full h-20 bg-white visible padding-container shadow-sm rounded-md z-20">
@@ -60,8 +60,8 @@ const Navbar = () => {
         </ul>
         
           {userData ? (
-            <div className="text-white lg:flexCenter">
-              <section className="">
+            <div className="text-white gap-5 lg:flexCenter">
+              {/* <section className="">
                 <DropdownMenu>
                 <DropdownMenuTrigger>
                   <Image
@@ -80,20 +80,21 @@ const Navbar = () => {
                     <DropdownMenuItem>Profile</DropdownMenuItem>
                     <DropdownMenuItem>Settings</DropdownMenuItem>
                     <DropdownMenuItem>
-                      {/* <LogOut /> */}
+                      <LogOut />
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-              </section>
-            </div>
-          ) : (
-            <div className="hidden lg:flexCenter gap-5">
+              </section> */}
               <Link href="/login" className="flexCenter regular-20 btn_blue">
                 Login
               </Link>
               <Link href="/signup" className="flexCenter regular-20 btn_blue">
                 Sign Up
               </Link>
+            </div>
+          ) : (
+            <div className="hidden lg:flexCenter gap-5">
+                hello
             </div>
           )}
         

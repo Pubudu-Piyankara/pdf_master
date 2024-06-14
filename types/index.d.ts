@@ -8,3 +8,6 @@ declare type SignUpUser = {
     email: string;
     password: string;
 };
+const  File= {
+    arrayBuffer: () => Promise<ArrayBuffer>,
+}
