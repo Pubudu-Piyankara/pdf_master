@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -22,9 +23,11 @@ const Hero = () => {
             Upload, organize, and view your files in a user-friendly and secure
             environment.
           </p>
-          <button className="flexCenter btn_brown text-white px-6 py-3 rounded-lg transition">
-            Get Started
-          </button>
+          <Link href={"/upload"}>
+            <button className="flexCenter btn_brown text-white px-6 py-3 rounded-lg transition">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </section>

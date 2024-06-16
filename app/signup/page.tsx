@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { Sign } from "crypto";
 
 const SignUpPage = () => {
   const router = useRouter();
